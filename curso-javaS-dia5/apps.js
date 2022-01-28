@@ -145,28 +145,41 @@ document.write(`
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">Hora</th>
-            <th scope="col">Especialista</th>
             <th scope="col">Paciente</th>
-            <th scope="col">RUT</th>
-            <th scope="col">Hora</th>
+            <th scope="col">Previsión</th>
         </tr>
     </thead>
     <tbody>
 `);
+function firstAndLast() {
 
-radiologia.forEach(() => {
-    if (index=0)
+    const firstItem = radiologia[0];
+    const lastItem = radiologia[radiologia.length-1];
+    
+    const objOutput = {firstItem, lastItem};
+    
+    return objOutput;
+    }
+    
+    const display = firstAndLast(radiologia);
+    
+    console.log(display);
+
+    
+    
     document.write(`
     <tr>
-        <th scope="row">${radiologia[0].hora}</th>
-        <td>${radiologia[0].especialista}</td>
-        <td>${radiologia[0].paciente}</td>
-        <td>${radiologia[0].rut}</td>
-        <td>${radiologia[0].prevision}</td>
+    <th scope="row">Primera Atención: ${display.firstItem.paciente}</th>
+    <td> - ${display.firstItem.prevision}</td>
+    
     </tr>
-    `);
-});
+    <tr>
+    <th scope="row">Última Atención: ${display.lastItem.paciente}</th>
+    <td> - ${display.lastItem.prevision}</td>
+
+    </tr>
+`);
+
 
 document.write(`
 </tbody>
@@ -180,27 +193,38 @@ document.write(`
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">Hora</th>
-            <th scope="col">Especialista</th>
             <th scope="col">Paciente</th>
-            <th scope="col">RUT</th>
-            <th scope="col">Hora</th>
+            <th scope="col">Previsión<th>
         </tr>
     </thead>
     <tbody>
 `);
+function firstAndLast() {
 
-traumatologia.forEach((item => {
+    const firstItem = traumatologia[0];
+    const lastItem = traumatologia[traumatologia.length-1];
+    
+    const objOutput = {firstItem, lastItem};
+    
+    return objOutput;
+    }
+    
+    const display1 = firstAndLast(traumatologia);
+    
+    console.log(display1);
+
     document.write(`
     <tr>
-        <th scope="row">${item.hora}</th>
-        <td>${item.especialista}</td>
-        <td>${item.paciente}</td>
-        <td>${item.rut}</td>
-        <td>${item.prevision}</td>
+        <th scope="row">Primera Atención: ${display1.firstItem.paciente}</th>
+        <td> - ${display1.firstItem.prevision}</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">Última Atención: ${display1.lastItem.paciente}</th>
+        <td> - ${display1.lastItem.prevision}</td>
+    
     </tr>
     `);
-}));
 
 document.write(`
 </tbody>
@@ -214,30 +238,41 @@ document.write(`
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">Hora</th>
-            <th scope="col">Especialista</th>
+            
             <th scope="col">Paciente</th>
-            <th scope="col">RUT</th>
-            <th scope="col">Hora</th>
+            
+            <th scope="col">Previsión</th>
         </tr>
     </thead>
     <tbody>
 `);
+function firstAndLast() {
 
+    const firstItem = traumatologia[0];
+    const lastItem = traumatologia[traumatologia.length-1];
+    
+    const objOutput = {firstItem, lastItem};
+    
+    return objOutput;
+    }
+    
+    const display2 = firstAndLast(traumatologia);
+    
+    console.log(display2);
 
+    document.write(`
+    <tr>
+    <th scope="row">Primera Atención: ${display2.firstItem.paciente}</th>
+    <td> - ${display2.firstItem.prevision}</td>
+    
+    </tr>
+    <tr>
+    <th scope="row">Última Atención: ${display2.lastItem.paciente}</th>
+    <td> - ${display2.lastItem.prevision}</td>
 
-    dental.forEach((item, idx)=> {
-        if(idx=1){
-         document.write(`
-        <tr>
-            <th scope="row">${item.hora}</th>
-            <td>${item.especialista}</td>
-            <td>${item.paciente}</td>
-            <td>${item.rut}</td>
-            <td>${item.prevision}</td>
-        </tr>
-        `);}
-    });
+    </tr>
+    `);
+
         
     document.write(`
     </tbody>
@@ -246,13 +281,106 @@ document.write(`
     `);
 
 
+    document.write(`
+    <div class="container">
+    <h2>Tabla Radiología</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Hora</th>
+                <th scope="col">Especialista</th>
+                <th scope="col">Paciente</th>
+                <th scope="col">RUT</th>
+                <th scope="col">Previsión<</th>
+            </tr>
+        </thead>
+        <tbody>
+    `);  
+    radiologia.forEach((item) =>{
+        document.write(`
+        <tr>
+            <th scope="row">${item.hora}</th>
+            <td>${item.especialista}</td>
+            <td>${item.paciente}</td>
+            <td>${item.rut}</td>
+            <td>${item.prevision}</td>
+        </tr>
+        `);
+    });    
         
+    document.write(`
+    </tbody>
+    </table>
+    </div>
+    `);
+
+
+    document.write(`
+    <div class="container">
+    <h2>Tabla Traumatología</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Hora</th>
+                <th scope="col">Especialista</th>
+                <th scope="col">Paciente</th>
+                <th scope="col">RUT</th>
+                <th scope="col">Previsión<</th>
+            </tr>
+        </thead>
+        <tbody>
+    `);  
+    traumatologia.forEach((item) =>{
+        document.write(`
+        <tr>
+            <th scope="row">${item.hora}</th>
+            <td>${item.especialista}</td>
+            <td>${item.paciente}</td>
+            <td>${item.rut}</td>
+            <td>${item.prevision}</td>
+        </tr>
+        `);
+    });    
         
+    document.write(`
+    </tbody>
+    </table>
+    </div>
+    `);
 
 
-
-
-
+    document.write(`
+    <div class="container">
+    <h2>Tabla Dental</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Hora</th>
+                <th scope="col">Especialista</th>
+                <th scope="col">Paciente</th>
+                <th scope="col">RUT</th>
+                <th scope="col">Previsión<</th>
+            </tr>
+        </thead>
+        <tbody>
+    `);  
+    dental.forEach((item) =>{
+        document.write(`
+        <tr>
+            <th scope="row">${item.hora}</th>
+            <td>${item.especialista}</td>
+            <td>${item.paciente}</td>
+            <td>${item.rut}</td>
+            <td>${item.prevision}</td>
+        </tr>
+        `);
+    });    
+        
+    document.write(`
+    </tbody>
+    </table>
+    </div>
+    `);
 
 
 
