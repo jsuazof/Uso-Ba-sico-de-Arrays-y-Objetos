@@ -151,31 +151,31 @@ document.write(`
     </thead>
     <tbody>
 `);
-function firstAndLast() {
+function firstAndLast1() {
 
-    const firstItem = radiologia[0];
-    const lastItem = radiologia[radiologia.length-1];
+    const firstItem1 = radiologia[0];
+    const lastItem1 = radiologia[radiologia.length-1];
     
-    const objOutput = {firstItem, lastItem};
+    const objOutput1 = {firstItem1, lastItem1};
     
-    return objOutput;
+    return objOutput1;
     }
     
-    const display = firstAndLast(radiologia);
+    const display1 = firstAndLast1(radiologia);
     
-    console.log(display);
+    console.log(display1);
 
     
     
     document.write(`
     <tr>
-    <th scope="row">Primera Atención: ${display.firstItem.paciente}</th>
-    <td> - ${display.firstItem.prevision}</td>
+    <th scope="row">Primera Atención: ${display1.firstItem1.paciente}</th>
+    <td> - ${display1.firstItem1.prevision}</td>
     
     </tr>
     <tr>
-    <th scope="row">Última Atención: ${display.lastItem.paciente}</th>
-    <td> - ${display.lastItem.prevision}</td>
+    <th scope="row">Última Atención: ${display1.lastItem1.paciente}</th>
+    <td> - ${display1.lastItem1.prevision}</td>
 
     </tr>
 `);
@@ -199,29 +199,29 @@ document.write(`
     </thead>
     <tbody>
 `);
-function firstAndLast() {
+function firstAndLast2() {
 
-    const firstItem = traumatologia[0];
-    const lastItem = traumatologia[traumatologia.length-1];
+    const firstItem2 = traumatologia[0];
+    const lastItem2 = traumatologia[traumatologia.length-1];
     
-    const objOutput = {firstItem, lastItem};
+    const objOutput2 = {firstItem2, lastItem2};
     
-    return objOutput;
+    return objOutput2;
     }
     
-    const display1 = firstAndLast(traumatologia);
+    const display2 = firstAndLast2(traumatologia);
     
-    console.log(display1);
+    console.log(display2);
 
     document.write(`
     <tr>
-        <th scope="row">Primera Atención: ${display1.firstItem.paciente}</th>
-        <td> - ${display1.firstItem.prevision}</td>
+        <th scope="row">Primera Atención: ${display2.firstItem2.paciente}</th>
+        <td> - ${display2.firstItem2.prevision}</td>
         
     </tr>
     <tr>
-        <th scope="row">Última Atención: ${display1.lastItem.paciente}</th>
-        <td> - ${display1.lastItem.prevision}</td>
+        <th scope="row">Última Atención: ${display2.lastItem2.paciente}</th>
+        <td> - ${display2.lastItem2.prevision}</td>
     
     </tr>
     `);
@@ -246,29 +246,29 @@ document.write(`
     </thead>
     <tbody>
 `);
-function firstAndLast() {
+function firstAndLast3() {
 
-    const firstItem = traumatologia[0];
-    const lastItem = traumatologia[traumatologia.length-1];
+    const firstItem3 = dental[0];
+    const lastItem3 = dental[dental.length-1];
     
-    const objOutput = {firstItem, lastItem};
+    const objOutput3 = {firstItem3, lastItem3};
     
-    return objOutput;
+    return objOutput3;
     }
     
-    const display2 = firstAndLast(traumatologia);
+    const display3 = firstAndLast3(traumatologia);
     
-    console.log(display2);
+    console.log(display3);
 
     document.write(`
     <tr>
-    <th scope="row">Primera Atención: ${display2.firstItem.paciente}</th>
-    <td> - ${display2.firstItem.prevision}</td>
+    <th scope="row">Primera Atención: ${display3.firstItem3.paciente}</th>
+    <td> - ${display3.firstItem3.prevision}</td>
     
     </tr>
     <tr>
-    <th scope="row">Última Atención: ${display2.lastItem.paciente}</th>
-    <td> - ${display2.lastItem.prevision}</td>
+    <th scope="row">Última Atención: ${display3.lastItem3.paciente}</th>
+    <td> - ${display3.lastItem3.prevision}</td>
 
     </tr>
     `);
