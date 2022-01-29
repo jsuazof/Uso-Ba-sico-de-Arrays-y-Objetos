@@ -151,31 +151,35 @@ document.write(`
     </thead>
     <tbody>
 `);
-function firstAndLast1() {
+function firstAndLast(array) {
 
-    const firstItem1 = radiologia[0];
-    const lastItem1 = radiologia[radiologia.length-1];
+    const firstItem = array[0];
+    const lastItem = array[array.length-1];
     
-    const objOutput1 = {firstItem1, lastItem1};
+    const objOutput = {firstItem, lastItem};
     
-    return objOutput1;
+    return objOutput;
     }
     
-    const display1 = firstAndLast1(radiologia);
+    const display1 = firstAndLast(radiologia);
+    const display2 = firstAndLast(traumatologia)
+    const display3 = firstAndLast(dental)
     
     console.log(display1);
+    console.log(display2);
+    console.log(display3);
 
     
     
     document.write(`
     <tr>
-    <th scope="row">Primera Atención: ${display1.firstItem1.paciente}</th>
-    <td> - ${display1.firstItem1.prevision}</td>
+    <th scope="row">Primera Atención: ${display1.firstItem.paciente}</th>
+    <td> - ${display1.firstItem.prevision}</td>
     
     </tr>
     <tr>
-    <th scope="row">Última Atención: ${display1.lastItem1.paciente}</th>
-    <td> - ${display1.lastItem1.prevision}</td>
+    <th scope="row">Última Atención: ${display1.lastItem.paciente}</th>
+    <td> - ${display1.lastItem.prevision}</td>
 
     </tr>
 `);
@@ -199,29 +203,17 @@ document.write(`
     </thead>
     <tbody>
 `);
-function firstAndLast2() {
 
-    const firstItem2 = traumatologia[0];
-    const lastItem2 = traumatologia[traumatologia.length-1];
-    
-    const objOutput2 = {firstItem2, lastItem2};
-    
-    return objOutput2;
-    }
-    
-    const display2 = firstAndLast2(traumatologia);
-    
-    console.log(display2);
 
     document.write(`
     <tr>
-        <th scope="row">Primera Atención: ${display2.firstItem2.paciente}</th>
-        <td> - ${display2.firstItem2.prevision}</td>
+        <th scope="row">Primera Atención: ${display2.firstItem.paciente}</th>
+        <td> - ${display2.firstItem.prevision}</td>
         
     </tr>
     <tr>
-        <th scope="row">Última Atención: ${display2.lastItem2.paciente}</th>
-        <td> - ${display2.lastItem2.prevision}</td>
+        <th scope="row">Última Atención: ${display2.lastItem.paciente}</th>
+        <td> - ${display2.lastItem.prevision}</td>
     
     </tr>
     `);
@@ -246,29 +238,16 @@ document.write(`
     </thead>
     <tbody>
 `);
-function firstAndLast3() {
-
-    const firstItem3 = dental[0];
-    const lastItem3 = dental[dental.length-1];
-    
-    const objOutput3 = {firstItem3, lastItem3};
-    
-    return objOutput3;
-    }
-    
-    const display3 = firstAndLast3(traumatologia);
-    
-    console.log(display3);
 
     document.write(`
     <tr>
-    <th scope="row">Primera Atención: ${display3.firstItem3.paciente}</th>
-    <td> - ${display3.firstItem3.prevision}</td>
+    <th scope="row">Primera Atención: ${display3.firstItem.paciente}</th>
+    <td> - ${display3.firstItem.prevision}</td>
     
     </tr>
     <tr>
-    <th scope="row">Última Atención: ${display3.lastItem3.paciente}</th>
-    <td> - ${display3.lastItem3.prevision}</td>
+    <th scope="row">Última Atención: ${display3.lastItem.paciente}</th>
+    <td> - ${display3.lastItem.prevision}</td>
 
     </tr>
     `);
@@ -291,7 +270,7 @@ function firstAndLast3() {
                 <th scope="col">Especialista</th>
                 <th scope="col">Paciente</th>
                 <th scope="col">RUT</th>
-                <th scope="col">Previsión<</th>
+                <th scope="col">Previsión</th>
             </tr>
         </thead>
         <tbody>
@@ -325,7 +304,7 @@ function firstAndLast3() {
                 <th scope="col">Especialista</th>
                 <th scope="col">Paciente</th>
                 <th scope="col">RUT</th>
-                <th scope="col">Previsión<</th>
+                <th scope="col">Previsión</th>
             </tr>
         </thead>
         <tbody>
@@ -359,12 +338,12 @@ function firstAndLast3() {
                 <th scope="col">Especialista</th>
                 <th scope="col">Paciente</th>
                 <th scope="col">RUT</th>
-                <th scope="col">Previsión<</th>
+                <th scope="col">Previsión</th>
             </tr>
         </thead>
         <tbody>
     `);  
-    dental.forEach((item) =>{
+    dental.map((item) =>{
         document.write(`
         <tr>
             <th scope="row">${item.hora}</th>
